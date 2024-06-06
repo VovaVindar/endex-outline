@@ -73,6 +73,8 @@ const ThreeScene = () => {
       controls.enableZoom = false;
       controls.maxPolarAngle = Math.PI / 2;
       controls.minPolarAngle = Math.PI / 2;
+      controls.autoRotate = true;
+      controls.autoRotateSpeed = 2.2;
 
       let target = new THREE.WebGLRenderTarget(width, height, {
         samples: 10,
