@@ -1,0 +1,249 @@
+:root {
+  /* Color Primitives */
+  --primitive-color-endex-0: hsla(0, 0%, 0%, 1);
+  --primitive-color-endex-100: hsla(210, 3%, 10%, 1);
+  --primitive-color-endex-200: hsla(210, 3%, 13%, 1);
+  --primitive-color-endex-300: hsla(210, 3%, 22%, 1);
+  --primitive-color-endex-400: hsla(210, 3%, 36%, 1);
+  --primitive-color-endex-500: hsla(210, 3%, 62%, 1);
+  --primitive-color-endex-600: hsla(0, 0%, 100%, 1);
+}
+/* Display-P3 color, when supported. */
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --primitive-color-endex-0: color(display-p3 0 0 0);
+    --primitive-color-endex-100: color(display-p3 0.098039 0.101961 0.101961);
+    --primitive-color-endex-200: color(display-p3 0.12549 0.129412 0.133333);
+    --primitive-color-endex-300: color(display-p3 0.211765 0.219608 0.227451);
+    --primitive-color-endex-400: color(display-p3 0.34902 0.360784 0.372549);
+    --primitive-color-endex-500: color(display-p3 0.607843 0.619608 0.631373);
+    --primitive-color-endex-600: color(display-p3 1 1 1);
+  }
+}
+:root {
+  /* Color Tokens */
+  --token-color-text-primary: var(--primitive-color-endex-600);
+  --token-color-text-secondary: var(--primitive-color-endex-500);
+  --token-color-text-contrast: var(--primitive-color-endex-0);
+
+  --token-color-surface-primary: var(--primitive-color-endex-0);
+  --token-color-surface-secondary: var(--primitive-color-endex-100);
+  --token-color-surface-tertiary: var(--primitive-color-endex-200);
+  --token-color-surface-highlight: var(--primitive-color-endex-300);
+  --token-color-surface-contrast: var(--primitive-color-endex-600);
+
+  --token-color-border-primary: var(--primitive-color-endex-400);
+  --token-color-border-divider: var(--primitive-color-endex-500);
+
+  /* Letter Spacing */
+  --token-letter-spacing-1: -0.017em;
+  --token-letter-spacing-2: -0.01em;
+  --token-letter-spacing-3: -0.005em;
+  --token-letter-spacing-4: 0em;
+  --token-letter-spacing-5: 0.005em;
+
+  /* Font Size */
+  --token-font-size-1: clamp(
+    4.2969rem,
+    -0.0002rem + 5.7294vw,
+    9.1669rem
+  ); /* 110px at 1920, 146px at 2560, 79px at 1386, 68.75px at 1200, 40px at 375 */
+  --token-font-size-2: clamp(
+    3.6094rem,
+    -0.0002rem + 4.167vw,
+    6.6669rem
+  ); /* 80px at 1920, 106.67px at 2560, 57.75px at 1386, 40px at 375 */
+  --token-font-size-3: clamp(
+    2.5269rem,
+    0.0004rem + 2.9165vw,
+    4.6669rem
+  ); /* 56px at 1920, 74.67px at 2560,  40.43px at 1386, ?? at 375 */
+  --token-font-size-4: clamp(
+    1.3538rem,
+    0.0005rem + 1.5622vw,
+    2.5rem
+  ); /* 30px at 1920, 40px at 2560, 21.66px at 1386, ?? at 375 */
+  --token-font-size-5: clamp(
+    0.9925rem,
+    0.0001rem + 1.1457vw,
+    1.8331rem
+  ); /* 22px at 1920, 29.33px at 2560, 15.88px at 1386, 18px at 375 */
+  --token-font-size-6: clamp(
+    0.8125rem,
+    0.0009rem + 0.937vw,
+    1.5rem
+  ); /* 18px at 1920, 24px at 2560, 13px at 1386, 14px at 375 */
+  --token-font-size-7: clamp(
+    0.8125rem,
+    0.3181rem + 0.5707vw,
+    1.2313rem
+  ); /* 16px at 1920, 19.6px at 2560, 13px at 1386, 14px at 375 */
+}
+
+/* Typography */
+/*
+Fluid typographu calculator:
+@link https://utopia.fyi/type/calculator?c=1386,13,0,2560,24,1.25,0,0,1920&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+but replace 'vi' with 'vw'
+*/
+
+.text-heading-1 {
+  font-size: var(--token-font-size-1);
+  font-family: var(--aeonik);
+  font-weight: 400;
+  letter-spacing: var(--token-letter-spacing-1);
+  line-height: 95%;
+}
+.text-heading-2 {
+  font-size: var(--token-font-size-2);
+  font-family: var(--aeonik);
+  font-weight: 400;
+  letter-spacing: var(--token-letter-spacing-1);
+  line-height: 100%;
+}
+.text-heading-3 {
+  font-size: var(--token-font-size-3);
+  font-family: var(--aeonik);
+  font-weight: 400;
+  letter-spacing: var(--token-letter-spacing-1);
+  line-height: 110%;
+}
+.text-heading-4 {
+  font-size: var(--token-font-size-4);
+  font-family: var(--aeonik);
+  font-weight: 400;
+  letter-spacing: var(--token-letter-spacing-2);
+  line-height: 116%;
+}
+.text-body-1 {
+  font-size: var(--token-font-size-5);
+  font-family: var(--aeonik);
+  font-weight: 400;
+  letter-spacing: var(--token-letter-spacing-3);
+  line-height: 130%;
+}
+.text-body-2 {
+  font-size: var(--token-font-size-6);
+  font-family: var(--aeonik);
+  font-weight: 400;
+  letter-spacing: var(--token-letter-spacing-4);
+  line-height: 140%;
+}
+.text-mono-1 {
+  font-size: var(--token-font-size-6);
+  font-family: var(--nbgrotesk);
+  font-weight: 400;
+  letter-spacing: var(--token-letter-spacing-5);
+  line-height: 130%;
+  text-transform: uppercase;
+}
+.text-mono-1-bold {
+  font-size: var(--token-font-size-6);
+  font-family: var(--nbgrotesk);
+  font-weight: 700;
+  letter-spacing: var(--token-letter-spacing-2);
+  line-height: 130%;
+  text-transform: uppercase;
+}
+.text-mono-2 {
+  font-size: var(--token-font-size-7);
+  font-family: var(--nbgrotesk);
+  font-weight: 400;
+  letter-spacing: var(--token-letter-spacing-5);
+  line-height: 130%;
+  text-transform: uppercase;
+}
+.text-mono-2-bold {
+  font-size: var(--token-font-size-7);
+  font-family: var(--nbgrotesk);
+  font-weight: 700;
+  letter-spacing: var(--token-letter-spacing-2);
+  line-height: 130%;
+  text-transform: uppercase;
+}
+
+.text-color-primary {
+  color: var(--token-color-text-primary);
+}
+.text-color-secondary {
+  color: var(--token-color-text-secondary);
+}
+.text-color-contrast {
+  color: var(--token-color-text-contrast);
+}
+
+/* Surfaces */
+.surface-color-primary {
+  background-color: var(--token-color-surface-primary);
+}
+.surface-color-secondary {
+  background-color: var(--token-color-surface-secondary);
+}
+.surface-color-tertiary {
+  background-color: var(--token-color-surface-tertiary);
+}
+.surface-color-highlight {
+  background-color: var(--token-color-surface-highlight);
+}
+.surface-color-contrast {
+  background-color: var(--token-color-surface-contrast);
+}
+
+/* Borders */
+.border-primary {
+  border: 1px solid var(--token-color-border-primary);
+}
+.border-divider {
+  background: linear-gradient(
+        to right,
+        var(--token-color-border-divider) 33.34%,
+        transparent 33.34%
+      )
+      top repeat-x,
+    linear-gradient(
+        var(--token-color-border-divider) 33.34%,
+        transparent 33.34%
+      )
+      right repeat-y,
+    linear-gradient(
+        to right,
+        var(--token-color-border-divider) 33.34%,
+        transparent 33.34%
+      )
+      bottom repeat-x,
+    linear-gradient(
+        var(--token-color-border-divider) 33.34%,
+        transparent 33.34%
+      )
+      left repeat-y;
+  background-size: 6px 1px, 1px 6px;
+}
+
+@media screen and (max-width: 620px) {
+  :root {
+    /* Font Size */
+    --token-font-size-6: 14px;
+    --token-font-size-7: 14px;
+    --token-font-size-5: 18px;
+  }
+}
+@media screen and (max-width: 520px) {
+  :root {
+    /* Letter Spacing */
+    --token-letter-spacing-5: 0.002em;
+
+    /* Font Size */
+    --token-font-size-1: 40px;
+    --token-font-size-2: 40px;
+  }
+  .text-heading-1 {
+    line-height: 100%;
+  }
+}
+@media screen and (max-width: 335px) {
+  :root {
+    /* Font Size */
+    --token-font-size-6: 13px;
+    --token-font-size-7: 13px;
+  }
+}

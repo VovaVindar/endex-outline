@@ -1,0 +1,107 @@
+.root-path-article {
+  display: none;
+}
+.hero-container {
+  padding-left: clamp(4.375rem, 0.0216rem + 5.0256vw, 8.0625rem);
+  padding-right: 35px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: 100%;
+}
+.hero-left {
+  max-width: clamp(30.875rem, 0.1029rem + 41.0294vw, 65.75rem);
+  margin-top: clamp(5.625rem, 12.11vh, 10.3125rem);
+  width: max-content;
+  z-index: 1;
+}
+.hero-title {
+  margin-left: clamp(-0.5625rem, -0.0174rem + -0.3407vw, -0.3125rem);
+}
+.hero-description {
+  text-wrap: balance;
+  max-width: clamp(24.8125rem, -0.0534rem + 28.7053vw, 45.875rem);
+  min-width: 22.9375rem;
+  margin-top: clamp(1.625rem, 0.0755rem + 1.7888vw, 2.9375rem);
+}
+.hero-btn-container {
+  margin-top: clamp(2.5625rem, -0.0938rem + 3.0664vw, 4.8125rem);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(1.5625rem, -0.0608rem + 1.8739vw, 2.9375rem);
+}
+.hero-divider {
+  margin-top: clamp(4.125rem, -0.007rem + 4.77vw, 7.625rem);
+  height: 1px;
+  width: 100%;
+  margin-bottom: clamp(2rem, -0.2136rem + 2.5554vw, 3.875rem);
+}
+.hero-right {
+  height: 100%;
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 40px;
+  padding-left: 30px;
+}
+.hero-right > div {
+  width: 100%;
+  height: 100%;
+}
+
+@media all and (max-width: 1150px) {
+  .hero-container {
+    flex-direction: column;
+    padding: 0 clamp(1.625rem, 0.0017rem + 1.8739vw, 3rem);
+    align-items: center;
+    width: fit-content;
+    margin-top: 83px;
+  }
+  .hero-left {
+    margin-top: 50px;
+    margin-bottom: 120px;
+  }
+  .hero-right {
+    display: none;
+  }
+}
+@media all and (max-width: 620px) {
+  .hero-container {
+    padding: 0 15px;
+  }
+  .hero-description {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .hero-title {
+    margin-left: -1px;
+  }
+}
+@media all and (max-width: 520px) {
+  .root-path-article {
+    display: block;
+    width: 100%;
+  }
+  .hero-description {
+    margin-top: 30px;
+  }
+  .hero-btn-container {
+    margin-top: 32px;
+  }
+  .hero-divider {
+    margin-top: 60px;
+    margin-bottom: 35px;
+  }
+}
+@media screen and (max-width: 455px) {
+  .hero-description {
+    text-wrap: unset;
+    max-width: 354px;
+  }
+}
+@media screen and (max-width: 355px) {
+  .hero-btn-container {
+    gap: 18px;
+  }
+}

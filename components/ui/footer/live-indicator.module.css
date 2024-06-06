@@ -1,0 +1,17 @@
+.indicator-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(0.4375rem, -0.0052rem + 0.5111vw, 0.8125rem);
+}
+.indicator-icon {
+  width: clamp(0.8875rem, -0.057rem + 1.0903vw, 1.6875rem);
+  height: clamp(0.8875rem, -0.057rem + 1.0903vw, 1.6875rem);
+  max-width: clamp(0.8875rem, -0.057rem + 1.0903vw, 1.6875rem);
+  max-height: clamp(0.8875rem, -0.057rem + 1.0903vw, 1.6875rem);
+  filter: invert(68%) sepia(6%) saturate(169%) hue-rotate(169deg)
+    brightness(91%) contrast(91%);
+  margin-top: -3px;
+  position: relative;
+}
